@@ -33,6 +33,12 @@ backup_opts = [
         default="__automated_backup",
         help=_("The key string of metadata the VM, which requres back up, has"),
     ),
+    cfg.IntOpt(
+        "retry_timeout",
+        default=1800,
+        min=1,
+        help=_("The timeout for retry seconds."),
+    ),
 ]
 
 rotation_opts = [
