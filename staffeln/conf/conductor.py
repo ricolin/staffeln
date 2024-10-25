@@ -72,6 +72,12 @@ backup_opts = [
         min=0,
         help=_("Number of incremental backups between full backups."),
     ),
+    cfg.IntOpt(
+        "retry_timeout",
+        default=300,
+        min=1,
+        help=_("The timeout for retry, the unit is one second."),
+    ),
 ]
 
 rotation_opts = [
